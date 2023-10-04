@@ -430,6 +430,11 @@ footer .links .social-media a{
 }
 
 @media (max-width:650px){
+
+    body{
+        overflow-x: hidden;
+    }
+    
     .welcome {
         height: 70vh;
         /* margin: 0rem 2rem 3rem 3rem; */
