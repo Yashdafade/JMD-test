@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+header {
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+    background: rgba(30, 30, 30, 0.92);
+    z-index: 100;
+}
+
+header .heading {
+    margin-left: 8rem;
+    color: #ffff;
+    font-size: 2.5rem;
+    font-family: 'Inika', serif;
+}
+
+header .heading a{
+    text-decoration: none;
+    color: #ffff;
+}
+
+header #menu-icon {
+    display: none;
+}
+
+header .navbar {
+    margin: 8rem;
+    transform: translateX(0%);
+}
+
+header .navbar a {
+    color: #ffff;
+    list-style-type: none;
+    text-decoration: none;
+    padding-right: 2.2rem;
+    font-size: 1.2rem;
+    font-family: 'Inika', serif;
+}
+
+section {
+    min-width: 100vh;
+}
+
+.hero .video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.hero #construction-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.text-overlay h3 {
+    position: absolute;
+    top: 18rem;
+    left: 60rem;
+    width: 40vw;
+    color: #ffffff;
+    font-size: 6.5rem;
+    font-weight: 100;
+    /* z-index: 2; */
+    font-family: 'Kaushan Script', cursive;
+    text-align: center;
+    animation: drop-in 1s ease 200ms backwards;
+
+}
+
+
+/* .text-overlay p {
+    top: 25rem;
+    left: 65rem;
+    font-size: 2.5rem;
+    text-align: justify;
+    font-family: 'Marcellus', serif;
+    width: 40rem;
+    animation: drop-in 1s ease 200ms backwards;
+} */
+
+@keyframes drop-in {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+.down-icon a{
+    color: black;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    left: 50%;
+    font-size: 3rem;
+    cursor: pointer;
+    text-decoration: none;
+    transform: translateX(-50%);
+    animation: float 2s ease-in-out infinite;
+}
+
+
+@keyframes float {
+    0% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(-10px);
+        /* Adjust the floating height */
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+.welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 58px;
+    background: rgba(110, 99, 86, 0.85);
+    height: 40vh;
+    max-width: fit-content;
+    word-wrap: break-word;
+    margin: 5rem 5rem;
+    /* z-index: 3; */
+}
+
+.welcome .txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome .txt h2 {
+    font-size: 4rem;
+    font-family: 'Marcellus', serif;
+    margin-bottom: 1rem;
+}
+
+.welcome .txt span {
+    color: white;
+}
+
+.welcome .txt h5 {
+    margin: 1rem 2rem 1rem 2rem;
+    font-size: 2rem;
+    font-weight: 100;
+    color: #ffff;
+    text-align: center;
+    font-family: 'Marcellus', serif;
+}
+
+
+.welcome .txt a button {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.welcome .txt a{
+    text-decoration: none;
+}
+
+.welcome .txt a button:hover {
+    background: rgba(30, 30, 30, 0.92);
+    color: #ffff;
+}
+
+.welcome .txt a button i {
+    margin-left: 5px;
+    font-size: 1.2rem;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35vh;
+    border-radius: 2rem 2rem 0 0;
+    background: rgba(30, 30, 30, 0.92);
+    color: #ffffff;
+    gap: 30vw;
+    font-size: 1.7rem;
+    font-family: 'Inika', serif;
+}
+
+footer .copyright{
+    display: flex;
+    /* justify-content: flex-start; */
+}
+
+footer .links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10rem;
+}
+footer .links .nav-bar{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 2rem;
+}
+
+footer .links .nav-bar a{
+    color: #FFF;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+footer .links .another-link{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 2rem;
+}
+
+footer .links .another-link a{
+    color: #FFF;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+footer .links .social-media h5,a{
+    font-size: 1.5rem;
+}
+
+footer .links .social-media a{
+    display: inline-block; 
+}
+
+@media (max-width:1540px){
+    
+    .text-overlay h3 {
+        position: absolute;
+        top: 15rem;
+        left: 40rem;
+        color: #ffffff;
+        font-size: 5.5rem;
+        /* font-weight: 100; */
+        /* z-index: 2; */
+        /* font-family: 'Kaushan Script', cursive; */
+        /* text-align: center; */
+        /* animation: drop-in 1s ease 200ms backwards; */
+    
+    }
+}
+
+@media (max-width:1280px) {
+    header #menu-icon{
+        display: block;
+        color:#ffff;
+        font-size: 1.9rem;
+        float: right;
+        padding-right: 2rem;
+    }
+
+    header .navbar{ 
+        position: absolute;
+        top: -3.6rem;
+        left: -8rem;
+        width: 100%;
+        padding: 1rem 3%;
+        background: rgba(30, 30, 30, 0.92);
+        /* display: none; */
+        transform: translateX(100%);
+        transition: 0.5s ease;
+    }
+
+    header .navbar .active{
+        /* display: block; */
+        /* z-index: 100;     */
+        transform: translateX(0%);
+    }
+
+    header nav a {
+        display: block;
+        font-size: 1.2rem;
+        margin: 1rem 3%;
+    }
+
+    .text-overlay h3 {
+        position: absolute;
+        top: 15rem;
+        left: 30rem;
+        color: #ffffff;
+        font-size: 5rem;
+        /* font-weight: 100; */
+        /* z-index: 2; */
+        /* font-family: 'Kaushan Script', cursive; */
+        /* text-align: center; */
+        /* animation: drop-in 1s ease 200ms backwards; */
+    
+    }
+}
+
