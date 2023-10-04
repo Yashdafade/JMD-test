@@ -25,31 +25,36 @@
 
     <section class="hero" id="hero">
         <div class="video-wrapper">
-            <video id="construction-video" src="assets/pexels-thirdman-8482303 (1080p).mp4" autoplay loop muted></video>
+            <video id="construction-video" src="assets/pexels_videos_1388449 (1080p).mp4" autoplay loop muted></video>
         </div>
 
         <div class="text-overlay drop-in">
-            <h3 class="auto-input"></h3>
-            <!-- <p class="drop-in">JMD GROUPS is an entity specializing in various aspects of the construction, fabrication, painting, designing, furnituring industry. These companies are involved in planning, managing, and executing construction project.</p> -->
+            <h3 class="auto-input" ></h3>
         </div>
     </section>
 
-    <section class="icon">
+    <div class="icon">
         <div class="down-icon">
-            <a href="#welcome"><i id="downarrow" class='bx bxs-chevrons-down'></i></a>
+            <a href="#welcome"><i class='bx bxs-chevrons-down'></i></a>
         </div>
-    </section>
+    </div>
 
 
-    <section class="welcome" id="welcome">
-        <div class="txt">
-            <h2>Welcome to <span>JMD Groups</span></h2>
-            <h5>Where creativity Meets Construction Excellence . We are a versatile company Specialization in
-                Construction , Fabrication , Painting, Designing and Furnituring. With a passion for Innovation and a
-                commitment to quality, We transform ideas into Reality.<h5>
-                    <a href="#about-us"><button>Read More<i class='bx bx-right-arrow-alt'></i></button></a>
+    
+        <div id="welcome" class="welcome">
+            <div class="txt">
+                <h2>Welcome to <span>JMD Groups</span></h2>
+                <h5>Where creativity Meets Construction Excellence.
+                    We are a versatile company Specialization in
+                    Construction , Fabrication , Painting, Designing and Furnituring. With a passion for Innovation and a
+                    commitment to quality, We transform ideas into Reality.
+                <h5>
+                <a href="#about-us">
+                    <button>Read More<i class='bx bx-right-arrow-alt'></i></button>
+                </a>
+            </div>
         </div>
-    </section>
+    
 
 
 
@@ -75,9 +80,11 @@
 
             <div class="social-media">
                 <h5>Follow Us</h5>
-                <a href=""><i class='bx bxl-instagram' style='color:#ffffff'></i></a>
-                <a href=""><i class='bx bxl-facebook' style='color:#ffffff'></i></a>
-                <a href=""><i class='bx bxl-youtube' style='color:#ffffff'></i></a>
+                <div class="so-icon">
+                    <a href=""><i class='bx bxl-instagram' style='color:#ffffff'></i></a>
+                    <a href=""><i class='bx bxl-facebook' style='color:#ffffff'></i></a>
+                    <a href=""><i class='bx bxl-youtube' style='color:#ffffff'></i></a>
+                </div>
             </div>
         </div>
 
@@ -89,10 +96,11 @@
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script>
         var typed = new Typed(".auto-input", {
-            strings: ["Building a Better Tomorrow"],
+            strings: ["BUILDING A BETTER TOMORROW"],
             typeSpeed: 70,
             backSpeed: 70,
-            loop: true
+            loop: true,
+            showCursor: false
         })
 
     </script>
