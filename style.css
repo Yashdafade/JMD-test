@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&family=Kaushan+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +16,7 @@ header {
     justify-content: space-between;
     width: 100%;
     height: 70px;
-    background: rgba(30, 30, 30, 0.92);
+    /* background: rgba(30, 30, 30, 0.92); */
     z-index: 100;
 }
 
@@ -27,7 +29,7 @@ header .heading {
 
 header .heading a{
     text-decoration: none;
-    color: #ffff;
+    color: black;
 }
 
 header #menu-icon {
@@ -40,12 +42,13 @@ header .navbar {
 }
 
 header .navbar a {
-    color: #ffff;
+    color: black;
     list-style-type: none;
     text-decoration: none;
     padding-right: 2.2rem;
     font-size: 1.2rem;
     font-family: 'Inika', serif;
+    font-weight: 200;
 }
 
 section {
@@ -57,6 +60,9 @@ section {
     width: 100%;
     height: 80vh;
     overflow: hidden;
+    background-color: rgba(30, 30, 30, 0.92);
+    /* backdrop-filter: blur(40px); */
+    /* filter:blur(4px); */
 }
 
 .hero #construction-video {
@@ -66,72 +72,60 @@ section {
     z-index: -1;
 }
 
-.text-overlay h3 {
+.text-overlay {
     position: absolute;
-    top: 18rem;
-    left: 60rem;
-    width: 40vw;
-    color: #ffffff;
-    font-size: 6.5rem;
-    font-weight: 100;
-    /* z-index: 2; */
-    font-family: 'Kaushan Script', cursive;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
     text-align: center;
-    animation: drop-in 1s ease 200ms backwards;
-
+    color: white; 
+    font-size: 7rem; 
+    font-weight: bold; 
+    z-index: 2; 
+    font-family: 'Dela Gothic One', cursive;
+    animation: fade-in 1s ease-in-out;
+    width: 100%;
 }
 
-
-/* .text-overlay p {
-    top: 25rem;
-    left: 65rem;
-    font-size: 2.5rem;
-    text-align: justify;
-    font-family: 'Marcellus', serif;
-    width: 40rem;
-    animation: drop-in 1s ease 200ms backwards;
-} */
-
-@keyframes drop-in {
+@keyframes fade-in {
     from {
         opacity: 0;
-        transform: translateY(-100px);
     }
 
     to {
         opacity: 1;
-        transform: translate(0px);
     }
+}
+
+.down-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .down-icon a{
     color: black;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 2rem;
-    left: 50%;
     font-size: 3rem;
     cursor: pointer;
     text-decoration: none;
-    transform: translateX(-50%);
     animation: float 2s ease-in-out infinite;
 }
 
 
 @keyframes float {
     0% {
-        transform: translateX(-50%) translateY(0);
+        transform: translateY(0);
     }
 
     50% {
-        transform: translateX(-50%) translateY(-10px);
-        /* Adjust the floating height */
+        transform: translateY(-5px);
     }
 
     100% {
-        transform: translateX(-50%) translateY(0);
+        transform: translateY(0);
     }
 }
 
@@ -144,7 +138,7 @@ section {
     height: 40vh;
     max-width: fit-content;
     word-wrap: break-word;
-    margin: 5rem 5rem;
+    margin: 0rem 5rem 5rem 5rem;
     /* z-index: 3; */
 }
 
@@ -153,16 +147,20 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: justify;
+    word-wrap: break-word;
 }
 
 .welcome .txt h2 {
     font-size: 4rem;
     font-family: 'Marcellus', serif;
     margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 .welcome .txt span {
     color: white;
+    /* word-wrap: break-word; */
 }
 
 .welcome .txt h5 {
@@ -172,6 +170,7 @@ section {
     color: #ffff;
     text-align: center;
     font-family: 'Marcellus', serif;
+    word-wrap: break-word;
 }
 
 
@@ -251,38 +250,52 @@ footer .links .another-link a{
     font-size: 1.3rem;
 }
 
+footer .links .social-media{
+    line-height: 2rem;
+}
+
 footer .links .social-media h5,a{
     font-size: 1.5rem;
 }
 
+footer .links .social-media {
+    display: flex;
+    flex-direction: column;
+}
+
 footer .links .social-media a{
     display: inline-block; 
+    font-size: 2rem;
 }
 
 @media (max-width:1540px){
     
     .text-overlay h3 {
-        position: absolute;
-        top: 15rem;
-        left: 40rem;
-        color: #ffffff;
         font-size: 5.5rem;
-        /* font-weight: 100; */
-        /* z-index: 2; */
-        /* font-family: 'Kaushan Script', cursive; */
-        /* text-align: center; */
-        /* animation: drop-in 1s ease 200ms backwards; */
-    
     }
+
+    .welcome {
+        height: 50vh;
+    }
+
 }
 
 @media (max-width:1280px) {
+
+    body{
+        overflow-x: hidden;
+    }
+
+    header .heading {
+        margin-left: 2rem;
+    }
+
     header #menu-icon{
         display: block;
-        color:#ffff;
+        color:black;
         font-size: 1.9rem;
         float: right;
-        padding-right: 2rem;
+        padding-right: 1.2rem;
     }
 
     header .navbar{ 
@@ -291,15 +304,13 @@ footer .links .social-media a{
         left: -8rem;
         width: 100%;
         padding: 1rem 3%;
-        background: rgba(30, 30, 30, 0.92);
+        background: rgba(197, 226, 225, 0.92);
         /* display: none; */
         transform: translateX(100%);
         transition: 0.5s ease;
     }
 
     header .navbar .active{
-        /* display: block; */
-        /* z-index: 100;     */
         transform: translateX(0%);
     }
 
@@ -311,16 +322,152 @@ footer .links .social-media a{
 
     .text-overlay h3 {
         position: absolute;
-        top: 15rem;
-        left: 30rem;
-        color: #ffffff;
+        top: -10rem;
+        /* left: 40rem; */
+        /* color: #ffffff; */
         font-size: 5rem;
-        /* font-weight: 100; */
-        /* z-index: 2; */
-        /* font-family: 'Kaushan Script', cursive; */
-        /* text-align: center; */
-        /* animation: drop-in 1s ease 200ms backwards; */
-    
+        
+    }
+
+    .welcome {
+        height: 60vh;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+        gap: 10vh;
+        font-size: 1.4rem;
     }
 }
 
+@media (max-width:750px){
+    body{
+        overflow-x: hidden;
+    }
+
+    .hero #construction-video {
+        width: 100%;
+        height: 100%;
+        object-fit:fill;
+    }
+
+    .welcome {
+        height: 55vh;
+        margin: 0rem 2rem 3rem 3rem;
+    }
+
+    .welcome .txt h2 {
+        font-size: 3rem;
+    }
+        
+    .welcome .txt h5 {
+        font-size: 1.7rem;
+    }
+    
+
+    .text-overlay h3 {
+        position: absolute;
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        top: -10rem; 
+        font-size: 4rem;
+        font-weight: 100;
+        text-align: center;
+    }
+
+
+    .down-icon a{
+        position:relative;
+        margin: 0rem; 
+        font-size: 2.5rem;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+        font-size: 1.3rem;
+    }
+
+    footer .links{
+        display: flex;
+        flex-direction: column;
+        float: left;
+        gap: 5vh;
+    }
+
+    footer .links .nav-bar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    
+    footer .links .another-link{
+        display: flex;
+        align-items: center;
+        justify-content: center ;
+    }
+
+    footer .links .social-media {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.2rem;
+    }
+
+    footer .links .social-media a{
+        font-size: 2rem;
+    }
+}
+
+@media (max-width:650px){
+    .welcome {
+        height: 70vh;
+        /* margin: 0rem 2rem 3rem 3rem; */
+    }
+
+    .welcome .txt h2 {
+        font-size: 3rem;
+        /* margin: 0.5rem 0rem 0.5rem 0rem; */
+        margin: 0.5rem 4rem 0.5rem 3rem;
+    }
+
+    /* .welcome .txt h5{
+        
+    } */
+        
+    .welcome .txt h5 span{
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width:450px){
+    .welcome {
+        height: 75vh;
+        /* margin: 0rem 2rem 3rem 3rem; */
+    }
+
+    .welcome .txt h2 {
+        font-size: 2rem;
+        margin: 0.5rem 4rem 0.5rem 3rem;
+    }
+
+    .welcome .txt h5{
+        margin-bottom: 1.5rem;
+    }
+        
+    .welcome .txt h5 span{
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+}
