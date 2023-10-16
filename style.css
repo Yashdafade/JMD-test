@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inika&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
 
 * {
@@ -22,7 +22,7 @@ header {
     z-index: 100;
     top: 0;
     left: 0;
-    /* background-color: rgb(5, 95, 197); */
+    /* background-color: #AED2FF; */
 }
 
 header .heading {
@@ -30,6 +30,7 @@ header .heading {
     color: #ffff;
     font-size: 2.5rem;
     font-family: 'Inika', serif;
+
 }
 
 header .heading a {
@@ -53,12 +54,13 @@ header .navbar a {
     text-decoration: none;
     /* padding-right: 2.2rem; */
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-family: 'Inika', serif;
     font-weight: 500;
     margin: 0px 10px;
     padding: 10px 10px;
 }
+
 
 /* Pull down  */
 header .navbar a:before {
@@ -77,6 +79,9 @@ header .navbar a:hover:before {
     opacity: 0.3;
     height: 100%;
 }
+
+
+
 
 
 
@@ -100,7 +105,7 @@ header .navbar a:hover:before {
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
-    font-size: 7rem;
+    font-size: 6.8rem;
     font-weight: bold;
     z-index: 2;
     font-family: 'Dela Gothic One', cursive;
@@ -155,18 +160,17 @@ header .navbar a:hover:before {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border-radius: 58px; */
-    background: rgba(110, 99, 86, 0.85);
-    /* background-image: url(https://www.yourfreecareertest.com/wp-content/uploads/2016/07/construction_manager.jpg);
-    background-repeat: no-repeat;
-    background-position:center;
-    background-size:cover; */
     height: 40vh;
     width: 100%;
     /* max-width: fit-content; */
     word-wrap: break-word;
     margin: 0rem 0rem 5rem 0rem;
     /* z-index: 3; */
+    ;
+    background: fixed url(https://rare-gallery.com/uploads/posts/380093-4k-wallpaper.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .welcome .txt {
@@ -183,21 +187,28 @@ header .navbar a:hover:before {
     font-family: 'Marcellus', serif;
     margin-bottom: 1rem;
     margin-top: 1rem;
+    color: #FFF;
+    opacity: 0;
+    animation: fade-in 1s ease forwards;
 }
 
-.welcome .txt span {
-    color: white;
-    /* word-wrap: break-word; */
-}
+/* .welcome .txt span { */
+/* color: white; */
+/* color: black; */
+/* word-wrap: break-word; */
+/* } */
 
 .welcome .txt h5 {
     margin: 1rem 2rem 1rem 2rem;
     font-size: 2rem;
     font-weight: 100;
     color: #ffff;
+    /* color: black; */
     text-align: center;
     font-family: 'Marcellus', serif;
     word-wrap: break-word;
+    opacity: 0;
+    animation: fade-in 1s ease forwards;
 }
 
 
@@ -227,6 +238,18 @@ header .navbar a:hover:before {
     font-size: 1.2rem;
 }
 
+.scroll-fade {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s, transform 1s;
+}
+
+.scroll-fade.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 footer {
     display: flex;
     justify-content: center;
@@ -239,6 +262,8 @@ footer {
     gap: 30vw;
     font-size: 1.7rem;
     font-family: 'Inika', serif;
+    animation: slideInFromBottom 1s;
+    animation: fadeIn 1s;
 }
 
 footer .copyright {
@@ -307,13 +332,13 @@ footer .links .social-media a {
     display: inline-block;
     font-size: 2rem;
     color: white;
-
 }
 
 footer .links .social-media a:hover {
     animation: pulse 0.5s;
     color: rgb(86, 177, 187);
 }
+
 
 @keyframes pulse {
 
@@ -393,11 +418,11 @@ footer .links .social-media a:hover {
 
     /* Pull down  */
     header .navbar a:before {
-       display: none;
+        display: none;
     }
 
     header .navbar a:hover:before {
-      display: none;
+        display: none;
     }
 
 
