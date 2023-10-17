@@ -104,14 +104,17 @@ header .navbar a:hover:before {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: white;
-    font-size: 6.8rem;
     font-weight: bold;
     z-index: 2;
     font-family: 'Dela Gothic One', cursive;
     animation: fade-in 1s ease-in-out;
     width: 100%;
     /* padding: 1rem; */
+}
+
+.text-overlay .titleb{
+    font-size: 6.8rem;
+    color: #FFF;
 }
 
 @keyframes fade-in {
@@ -129,6 +132,7 @@ header .navbar a:hover:before {
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin-top: 0.5rem;
 }
 
 .down-icon a {
@@ -166,7 +170,6 @@ header .navbar a:hover:before {
     word-wrap: break-word;
     margin: 0rem 0rem 5rem 0rem;
     /* z-index: 3; */
-    ;
     background: fixed url(https://rare-gallery.com/uploads/posts/380093-4k-wallpaper.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -215,9 +218,10 @@ header .navbar a:hover:before {
 .welcome .txt a button {
     display: flex;
     align-items: center;
+    width: 10rem;
     background-color: #ffffff;
     color: black;
-    padding: 10px 20px;
+    padding: 0.5rem;
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -235,7 +239,7 @@ header .navbar a:hover:before {
 
 .welcome .txt a button i {
     margin-left: 5px;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .scroll-fade {
@@ -248,6 +252,198 @@ header .navbar a:hover:before {
     opacity: 1;
     transform: translateY(0);
 }
+
+.section-services {
+	/* font-family: "Poppins", sans-serif; */
+    font-family: 'Marcellus', serif;
+	background-color: #e6edf7;
+	color: #202020;
+	padding-top: 115px;
+    /* padding-bottom: 30px; */
+    margin-bottom: 5rem;
+}
+
+.section-services .header-section {
+	margin-bottom: 34px;
+}
+
+.section-services .header-section .title {
+	position: relative;
+    padding-bottom: 14px;
+    margin-bottom: 25px;
+	font-weight: 700;
+    font-size: 40px;
+}
+
+.section-services .header-section .title:before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 50px;
+	height: 3px;
+	background-color: #71d8db;
+    border-radius: 3px;
+}
+
+.section-services .header-section .title:after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+    transform: translateX(30px);
+	width: 10px;
+	height: 3px;
+	background-color: #504f93;
+    border-radius: 3px;
+}
+
+.section-services .header-section .description {
+	font-size: 18px;
+    color: #282828;
+}
+
+.section-services .single-service {
+    position: relative;
+    margin-top: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 40px 30px;
+    overflow: hidden;
+    height: 25rem;
+    /* opacity: 0; */
+    transform: translateY(40px);
+    transition: opacity 1s, transform 1s;
+    
+}
+
+.section-services .single-service .animated2 {
+    /* opacity: 1; */
+    transform: translateY(0);
+}
+
+.section-services .single-service .content {
+	position: relative;
+	z-index: 20;
+}
+
+.section-services .single-service .circle-before {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    transform: translate(40%, -40%);
+    width: 150px;
+    height: 150px;
+    background-color: #71d8db;
+    border: 6px solid #178386;
+    border-radius: 50%;
+    opacity: 0.5;
+    z-index: 10;
+    transition: all .6s;
+}
+
+.section-services .single-service:hover .circle-before {
+	width: 100%;
+	height: 100%;
+	transform: none;
+	border: 0;
+	border-radius: 0;
+	opacity: 1;
+}
+
+.section-services .single-service .icon {
+	display: inline-block;
+	margin-bottom: 26px;
+    width: 70px;
+    height: 70px;
+    background-color: #71d8db;
+    border-radius: 5px;
+    line-height: 70px;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    transition: all .3s;
+}
+
+.section-services .single-service:hover .icon {
+	background-color: #fff;
+	color: #71d8db;
+}
+
+.section-services .single-service .title {
+    margin-bottom: 18px;
+	font-weight: 700;
+    font-size: 28px;
+    transition: color .3s;
+}
+
+.section-services .single-service:hover .title {
+	color: #fff;
+}
+
+.section-services .single-service .description {
+    margin-bottom: 20px;
+    font-size: 15px;
+    transition: color .3s;
+}
+
+.section-services .single-service:hover .description {
+	color: #fff;
+}
+
+.section-services .single-service a {
+	position: relative;
+	font-size: 18px;
+    color: #202020;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color .3s;
+}
+
+.section-services .single-service:hover a {
+	color: #fff;
+}
+
+.section-services .single-service a:after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 1px;
+	background-color: #71d8db;
+	transition: background-color .3s;
+}
+
+.section-services .single-service:hover a:after {
+	background-color: #fff;
+}
+
+.section-services .container .ser-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0rem;
+    margin: 2rem 0rem;
+}
+
+.section-services .container .ser-link .learn-more{
+    display: flex;
+    text-decoration: none;
+    color: black;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.section-services .container .ser-link .learn-more:hover{
+    transform: scale(1.2);
+}
+
 
 
 footer {
@@ -362,7 +558,7 @@ footer .links .social-media a:hover {
         width: 95%;
     }
 
-    .text-overlay h3 {
+    .text-overlay .titleb{
         font-size: 5.5rem;
     }
 
@@ -389,9 +585,9 @@ footer .links .social-media a:hover {
 
     header .navbar {
         position: absolute;
-        /* display: flex;
+        display: flex;
         flex-direction: column;
-        align-items:center; */
+        /* align-items:left;  */
         /* gap: -5rem; */
         /* justify-content: flex-start; */
         top: 0.35rem;
@@ -426,7 +622,7 @@ footer .links .social-media a:hover {
     }
 
 
-    .text-overlay h3 {
+    .text-overlay .titleb {
         position: absolute;
         top: -10rem;
         /* left: 40rem; */
@@ -484,7 +680,7 @@ footer .links .social-media a:hover {
     }
 
 
-    .text-overlay h3 {
+    .text-overlay .titleb {
         position: absolute;
         display: flex;
         justify-content: center;
@@ -585,7 +781,7 @@ footer .links .social-media a:hover {
 
 @media (max-width:520px) {
 
-    .text-overlay h3 {
+    .text-overlay .titleb {
         font-size: 3rem;
     }
 
@@ -626,7 +822,7 @@ footer .links .social-media a:hover {
         width: 400px;
     } */
 
-    .text-overlay h3 {
+    .text-overlay .titleb {
         font-size: 2.5rem;
     }
 
@@ -680,4 +876,14 @@ footer .links .social-media a:hover {
         /* margin-bottom: 0.2rem; */
     }
 
+}
+
+@media (max-width:280px){
+    .welcome .txt h5 {
+        font-size: 1.2rem;
+    }
+
+    .section-services .single-service {
+        height: 28rem;
+    }
 }
