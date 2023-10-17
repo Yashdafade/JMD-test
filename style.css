@@ -256,7 +256,11 @@ header .navbar a:hover:before {
 .section-services {
 	/* font-family: "Poppins", sans-serif; */
     font-family: 'Marcellus', serif;
-	background-color: #e6edf7;
+/* 	background-color: #e6edf7; */
+	background-image: url(https://rare-gallery.com/mocahbig/456477-skyline-vector-vector-art-illustration-simple-simple-background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 	color: #202020;
 	padding-top: 115px;
     /* padding-bottom: 30px; */
