@@ -166,12 +166,10 @@ header .navbar a:hover:before {
     justify-content: center;
     align-items: center;
     height: 40vh;
-    width: 100%;
-    /* max-width: fit-content; */
+    /* width: 100%; */
     word-wrap: break-word;
     margin: 0rem 0rem 5rem 0rem;
-    /* z-index: 3; */
-    background: fixed url(https://rare-gallery.com/uploads/posts/380093-4k-wallpaper.jpg);
+    background: fixed url(assets/Welcome\ bg\ \(1\).jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -192,15 +190,10 @@ header .navbar a:hover:before {
     margin-bottom: 1rem;
     margin-top: 1rem;
     color: #FFF;
-    opacity: 0;
-    animation: fade-in 1s ease forwards;
+    /* opacity: 0; */
+    /* animation: fade-in 1s ease forwards; */
 }
 
-/* .welcome .txt span { */
-/* color: white; */
-/* color: black; */
-/* word-wrap: break-word; */
-/* } */
 
 .welcome .txt h5 {
     margin: 1rem 2rem 1rem 2rem;
@@ -211,8 +204,8 @@ header .navbar a:hover:before {
     text-align: center;
     font-family: 'Marcellus', serif;
     word-wrap: break-word;
-    opacity: 0;
-    animation: fade-in 1s ease forwards;
+    /* opacity: 0; */
+    /* animation: fade-in 1s ease forwards; */
 }
 
 
@@ -245,7 +238,7 @@ header .navbar a:hover:before {
 
 .scroll-fade {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(40px);
     transition: opacity 1s, transform 1s;
 }
 
@@ -1526,6 +1519,17 @@ footer .links .social-media a:hover {
 
 .content .form-head {
     font-size: 2.8rem;
+}
+
+.content .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50rem;
+}
+
+.review-head{
+    font-size: 3rem;
 }
 
 .form-control {
