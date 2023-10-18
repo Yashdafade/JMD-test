@@ -13,6 +13,7 @@ menuicon.addEventListener("click", () => {
 
 //welcome animation
 const elementsToAnimate = document.querySelectorAll('.scroll-fade');
+const elementsToAnimate2 = document.querySelectorAll('.footer-animate');
 
 const isInViewport = (element) => {
     const rect = element.getBoundingClientRect();
@@ -25,17 +26,22 @@ const isInViewport = (element) => {
 };
 
 const animateOnScroll = () => {
-    elementsToAnimate.forEach((element, index) => {
+    elementsToAnimate.forEach((element) => {
         if (isInViewport(element) && !element.classList.contains('animated')) {
-            setTimeout(() => {
-                element.classList.add('animated');
-            }, index * 100); // Adjust the delay (100ms) between each element as needed.
+            element.classList.add('animated');
+        }
+    });
+
+    elementsToAnimate2.forEach((element) => {
+        if (isInViewport(element) && !element.classList.contains('animated2')) {
+            element.classList.add('animated2');
         }
     });
 };
 
 window.addEventListener('scroll', animateOnScroll);
 window.addEventListener('load', animateOnScroll);
+
 
 
 
