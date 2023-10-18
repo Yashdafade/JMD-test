@@ -245,7 +245,7 @@ header .navbar a:hover:before {
 
 .scroll-fade {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(20px);
     transition: opacity 1s, transform 1s;
 }
 
@@ -539,6 +539,17 @@ footer .links .social-media a:hover {
     animation: pulse 0.5s;
     color: rgb(86, 177, 187);
 }
+
+.footer-animate {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.5s, transform 0.5s;
+}
+.footer-animate.animated2 {
+    opacity: 1;
+    transform: scale(1);
+}
+
 
 
 @keyframes pulse {
@@ -1543,6 +1554,7 @@ footer .links .social-media a:hover {
     font-weight: bold;
 }
 
+
 .success-message {
     display: none;
     align-items: center;
@@ -1554,7 +1566,7 @@ footer .links .social-media a:hover {
     padding: 10px;
     margin-top: 10px;
     border-radius: 2rem;
- animation: fadeIn 0.3s ease-in;
+    animation: fadeIn 0.3s ease-in;
 }
 
 @keyframes fadeIn {
